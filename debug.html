@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>www.html.de</title>
+    <meta name="description" content="Das ist meine Testseite...">
+</head>
+
+<body>
+    <script>
+
+        // strict mode einschalten
+        'use strict';
+
+
+        // es ist egal, ob doppelte oder einfache Anführungszeichen genutzt wird.
+        // alert('Hallo Welt...');
+
+        // oder die alte Variante "var inhalt"
+        let inhalt = "Hallo Welt...";
+        document.write(inhalt);
+
+        /* Es ist auch möglich das "let" wegzulassen, allerdings erzeugen wir dann 
+        eine "globale Variable", die im Einsatz von Funktionen so ihre Tücken haben kann.*/
+
+        console.log(inhalt);
+
+        let zahla = 12;
+        let zahlb = 7;
+        
+        console.info('Inhalt von zahla:', zahla, ' / Inhalt der zahlb', zahlb);
+
+    </script>
+</body>
+
+</html>

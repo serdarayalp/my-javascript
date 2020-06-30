@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>www.html.de</title>
+    <meta name="description" content="Das ist meine Testseite...">
+</head>
+
+<body>
+    <script>
+
+        /*
+        UTF-16 ist das interne Format in JavaScript für die Speicherung von Strings. 
+        Wichtig: es ist nicht an die Seiten-Zeichenkodierung (encoding) gebunden. 
+        Es ist also egal, ob eine Website im Header „ISO-8859-1“ oder „UTF-8“ angibt. 
+        JavaScript nutzt immer UTF-16.
+        */
+
+        let variableText = "hier kommt Text";
+        let variableZahl = 34.23;
+        let variableBoolean = true;
+
+        // Backticks - Mehrzeilige Texte sind erlaubt...
+        let variableText2 = `hier kommt 
+        Text`;
+
+        // Ausgabe von Sonderzeichen
+        let variableText3 = "Heute ist ein \"toller\" Tag";
+
+        document.write(variableText3);
+
+        let laenge = variableText3.length;
+        document.write("<br /> Länge des Texts ist: " + laenge);
+
+    </script>
+
+</body>
+
+</html>
