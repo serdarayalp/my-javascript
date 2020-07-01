@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Beispiel Menüzeile oben fixieren</title>
+    <script>
+        window.addEventListener("load", function () {
+
+            /*
+            hash: hier sehen wir alles, was mit einem Hash-Zeichen in der URL angehängt ist. 
+            Somit sehen wir die typischen Sprungmarken
+
+            host: Name des Hosts und gegebenenfalls die Portnummer. Wenn keine Postnummer vorhanden 
+            ist, ist der folgende „hostname“ identisch
+
+            hostname: der Name des Severs mit Subdomain. Hier wird man oft das gewohnte www. – 
+            aber anderes ist möglich. Auch eine IP-Adresse kann hier auftauchen
+
+            href: die vollständige URL als String
+
+            origin: Die „Basis“-URL – also alles vor dem Pfadnamen siehe nächste Angabe
+
+            pathname: der Pfadname
+
+            port: die Portnummer, falls vorhanden
+
+            protocol: das Protokoll mit Doppelpunkt! Hier kann http: oder https: oder 
+            file: zum Beispiel stehen
+
+            search: alles nach dem Fragezeichen (mit dem Fragezeichen)
+            */
+
+            console.log(window.location.protocol);
+
+            // window.location = "https://www.php-kurs.com/erstes-php-programm.htm";
+
+            // window.location.assign("https://www.javascript-kurs.de");
+            // window.location.replace("https://www.javascript-kurs.de");
+            // window.location.reload();
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>Das ist eine Testseite...</h1>
+</body>
+
+</html>
