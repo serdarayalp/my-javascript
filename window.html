@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Seitentitel</title>
+    <script>
+
+        window.addEventListener("load", function () {
+            // window.prompt("Bitte Ihren Namen eingeben", "Serdar Ayalp");
+            // window.confirm("Stimmen Sie meiner Meinung zu?");
+
+            /*
+            let uhrzeitanzeige = setInterval(uhrzeitausgabe, 1000);
+            function uhrzeitausgabe() {
+                let zeitpunkt = new Date();
+                let uhrzeit = zeitpunkt.toLocaleTimeString();
+                document.write(uhrzeit + "<br>");
+            }
+            */
+
+            let uhrzeitanzeige = setInterval(uhrzeitausgabe, 1000);
+            function uhrzeitausgabe() {
+                let zeitpunkt = new Date();
+                let uhrzeit = zeitpunkt.toLocaleTimeString();
+                document.getElementById("anzeigeuhrzeit").innerHTML = uhrzeit;
+            }
+
+            /*
+            let vergangenezeit = 1;
+            function sekundenanzeige() {
+                document.write(vergangenezeit + "<br>");
+                vergangenezeit++;
+            }
+            setInterval(sekundenanzeige, 1000);
+            */
+
+            /*
+            let vergangenezeit = 1;
+            let sekundenzaehler = setInterval(
+                function () {
+                    document.write(vergangenezeit + "<br />");
+                    vergangenezeit++;
+                    if (vergangenezeit > 5) {
+                        clearInterval(sekundenzaehler);
+                    }
+                }, 1000
+            );
+            */
+
+            let anzeigeTastaturshortcuts = setTimeout(
+                function () {
+                    document.getElementById("tastaturshortcuts").innerHTML = "Anleitung";
+                }, 1500
+            );
+            // clearTimeout(anzeigeTastaturshortcuts);
+
+
+        }, false); // false hier ist nur aus historischen Gründen (für alte Browser)
+
+
+    </script>
+</head>
+
+<body>
+    <div id="tastaturshortcuts"></div>
+    <div id="anzeigeuhrzeit">hier Uhrzeit anzeigen</div>
+</body>
+
+</html>

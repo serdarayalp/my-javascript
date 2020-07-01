@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Seitentitel</title>
+    <script>
+
+        window.addEventListener("load", function () {
+            let schaltflaeche1 = document.getElementById("btn1");
+            // let schaltflaeche1 = document.querySelector("h1");
+            console.log(schaltflaeche1);
+
+            schaltflaeche1.addEventListener("click", function () {
+                alert("angeklickt")
+            }, false);
+        }, false); // false hier ist nur aus historischen Gründen (für alte Browser)
+
+
+    </script>
+</head>
+
+<body>
+    <h1 class="wichtig">Überschrift 1</h1>
+    <p class="wichtig">Erster Absatz mit Text</p>
+
+    <p>Zweiter Absatz mit Text</p>
+
+    <a href="https://www.javascript-kurs.de/">Text des Links</a>
+
+    <p>
+        <button id="btn1">bitte klicken</button>
+    </p>
+</body>
+
+</html>
