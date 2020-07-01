@@ -6,25 +6,29 @@
 
     <script>
 
-        // document.getElementById('seitenurl').value = window.location.pathname;
+        window.addEventListener("load", function () {
 
-        function TextauswahlAuslesen() {
+            // document.getElementById('seitenurl').value = window.location.pathname;
 
-            let nutzertextauswahl = "";
+            function TextauswahlAuslesen() {
 
-            if (window.getSelection) {
-                nutzertextauswahl = window.getSelection().toString();
-            } else if (document.getSelection) {
-                nutzertextauswahl = document.getSelection().toString();
-            } else if (document.selection) {
-                // Internet Explorer vor der Version 9
-                nutzertextauswahl = document.selection.createRange().toString();
+                let nutzertextauswahl = "";
+
+                if (window.getSelection) {
+                    nutzertextauswahl = window.getSelection().toString();
+                } else if (document.getSelection) {
+                    nutzertextauswahl = document.getSelection().toString();
+                } else if (document.selection) {
+                    // Internet Explorer vor der Version 9
+                    nutzertextauswahl = document.selection.createRange().toString();
+                }
+
+                if (nutzertextauswahl != "") {
+                    document.getElementById('fehlerarea').value = nutzertextauswahl;
+                }
             }
 
-            if (nutzertextauswahl != "") {
-                document.getElementById('fehlerarea').value = nutzertextauswahl;
-            }
-        }
+        });        
     </script>
 
 </head>

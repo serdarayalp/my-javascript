@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Das ist ein Test...</title>
+
+    <script>
+        window.addEventListener("load", function () {
+
+            document.write(new Date() + "<br />");
+
+
+            /* 
+            "Tue Jan 08 2019 13:39:52 GMT+0100 (Mitteleuropäische Normalzeit)"
+
+            Tue 	    Tag in englischer 3-Buchstabenschreibweise
+            Jan 	    Monat in englischer 3-Buchstabenschreibweise
+            08 	        Tag mit führender Null
+            2019        das Jahr
+            13.39:52 	die Uhrzeit mit Stunden:Minuten:Sekunden
+            GMT 	    Welche Zeitzone, hier „Greenwich Mean Time“
+            0100 	    Die Zeitverschiebung – in Deutschland ist im Winterhalbjahr 1 Stunde später als 
+                        die koordinierte Weltzeit (Kürzel UTC, damit man das auch mal gesehen hat). 
+                        (Mitteleuropäische Normalzeit) 
+            */
+
+
+            /*
+            new Date();
+            new Date(Jahr, Monat, Tag, Stunde, Minute, Sekunde, Millisekunde);
+            new Date(Millisekunde);
+            new Date(date string);
+            */
+
+            document.write(new Date(0) + "<br />");
+            document.write(new Date(2020) + "<br />");
+            document.write(new Date(2020, 3) + "<br />");
+
+            /*
+            Methode 	Erklärung
+            -------------------------------------------------------
+            getFullYear() 	Jahreszahl als 4-stellige Zahl (YYYY)
+            getMonth() 	Monat als Nummer, beginnend mit 0! (0-11)
+            getDate() 	Tag als Nummer (1-31)
+            getHours() 	Stunde (0-23)
+            getMinutes() 	Minute (0-59)
+            getSeconds() 	Sekunde (0-59)
+            getMilliseconds() 	Millisekunde (0-999)
+            getTime() 	Vergangene Millisekunden seit dem 1.1.1970
+            getDay() 	Wochentag als Nummer (0-6)
+            Date.now() 	Aktuelles Datum (ab ECMAScript 5) 
+            */
+
+            let d = new Date();
+
+            document.write(d.getFullYear() + "<br />");
+            document.write(d.getMonth() + "<br />");
+            document.write(d.getDate() + "<br />");
+            document.write(d.getHours() + "<br />");
+            document.write(d.getMinutes() + "<br />");
+            document.write(d.getSeconds() + "<br />");
+            document.write(d.getMilliseconds() + "<br />");
+            document.write(d.getTime() + "<br />");
+            document.write(d.getDay() + "<br />");
+
+            // document.write(Date.now() + "<br />");
+        
+
+        });        
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
