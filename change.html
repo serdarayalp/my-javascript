@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Seitentitel</title>
+    <script>
+        window.addEventListener("load", function () {
+
+            document.getElementsByTagName('p')[0].innerHTML = 'Absatz durch JavaScript geaendert';
+
+            let h1 = document.getElementsByTagName('h1')[0];
+            h1.style.color = 'red';
+            h1.style.backgroundColor = 'yellow';
+
+            let einzufuegendesObjekt = document.createElement("a");
+            einzufuegendesObjekt.href = "http://www.html.de";
+            einzufuegendesObjekt.innerHTML = "Tutorial für HTML, CSS und JavaScript";
+            einzufuegendesObjekt.style.backgroundColor = "#FFFF00";
+
+            document.body.appendChild(einzufuegendesObjekt);
+
+            let newItem = document.createElement("li");
+            let textnode = document.createTextNode("Java");
+            newItem.appendChild(textnode);
+
+            let lan = document.getElementById("languages");
+            lan.insertBefore(newItem, lan.childNodes[2]);
+
+        }, false); // false hier ist nur aus historischen Gründen (für alte Browser)
+
+    </script>
+</head>
+
+<body>
+
+    <h1>JavaScript Kurs für Einsteiger</h1>
+    <p>JavaScript lernen einfach gemacht</p>
+
+    <p id="bereich1">erster Absatz im JavaScript-Kurs zur Demonstration</p>
+
+    <ul id="languages">
+        <li>C++</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Pascal</li>
+    </ul>
+
+</body>
+
+</html>
