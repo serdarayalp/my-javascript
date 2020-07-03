@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Das ist ein Test...</title>
+
+    <script>
+        window.addEventListener("load", function () {
+
+            /*
+
+                                        truthy 	                            falsy
+            -----------------------------------------------------------------------------
+            Zeichenketten (string) 	    alle nichtleeren Strings 	        ""
+            Zahlen (number) 	        alle Zahlen außer 0 	            0, NaN
+            undefined 		                                                undefined 
+
+
+            truthy
+            -----------------------
+            if (true)
+            if (" ")
+            if (9)
+            if (5.12)
+            if (-2.1)
+            if ({})
+            if ([])
+            if ("foo")
+            if (new Date())
+            if (Infinity)
+            if (-Infinity) 	
+
+
+            falsy
+            -------------------------
+            if (false)
+            if ("")
+            if ('')
+            if (``)
+            if (0)
+            if (null)
+            if (undefined)
+            if (NaN)
+            if (document.all) 
+
+            */
+
+
+
+
+
+
+            /*
+            x = 3;
+            // 3 Gleichheitszeichen, damit wird sowohl auf den Inhalt wie auch auf den Datentyp kontrolliert!
+            if (x === 6) {
+                alert('Zahlen sind identisch');
+            } else {
+                alert('Zahlen NICHT identisch');
+            }
+            */
+
+            let vergleichszahl1 = "";
+            if (vergleichszahl1) {
+                console.log("innerhalb geschweiften Klammern - 1");
+            }
+
+            let vergleichszahl2 = " ";
+            if (vergleichszahl2) {
+                console.log("innerhalb geschweiften Klammern - 2");
+            }
+
+            let vergleichszahl3 = 0;
+            if (vergleichszahl3) {
+                console.log("innerhalb geschweiften Klammern - 3");
+            }
+
+            let vergleichszahl4 = 0;
+            if (vergleichszahl4) {
+                console.log("innerhalb geschweiften Klammern - 4");
+            }
+
+
+
+        });   
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
