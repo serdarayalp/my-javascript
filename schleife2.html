@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Das ist ein Test...</title>
+
+    <script>
+        window.addEventListener("load", function () {
+
+            /*
+            do {
+                nutzereingabe = prompt("Bitte Ja oder Nein eingeben: ");
+
+                if (nutzereingabe != "Ja" && nutzereingabe != "Nein") {
+                    alert("Es darf nur 'Ja' oder 'Nein' eingegeben werden!");
+                }
+
+            } while (nutzereingabe != "Ja" && nutzereingabe != "Nein");
+            */
+
+            let nutzereingabe = "";
+            
+            do {
+                nutzereingabe = prompt("min. 8 Zeichen langes Passwort eingeben");
+                if (nutzereingabe.length < 8) {
+                    alert("Nur " + nutzereingabe.length + " Zeichen! Min. 8 eingeben!");
+                }
+            } while (nutzereingabe.length < 8);
+
+            document.write(nutzereingabe);
+
+
+        });        
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

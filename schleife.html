@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Das ist ein Test...</title>
+
+    <script>
+        window.addEventListener("load", function () {
+
+            let links = document.links;
+
+            for (let i = 0; i < links.length; i++) {
+
+                let linkHref = document.createTextNode(links[i].href);
+                let lineBreak = document.createElement("br");
+
+                document.body.appendChild(linkHref);
+                document.body.appendChild(lineBreak);
+            }
+
+
+            let kinderfilme = ["Bambi", "Heidi", "Biene Maja", "Pinocchio"];
+            
+            durchgang = 0;
+            while (durchgang < kinderfilme.length) {
+                console.log(durchgang);
+                console.log(kinderfilme[durchgang]);
+                durchgang++;
+            }
+
+        });        
+    </script>
+
+</head>
+
+<body>
+    <p>Zum HTML lernen einfach unter
+        <a href="https://www.html-seminar.de/">HTML Seminar</a>
+        oder <a href="https://www.javascript-kurs.de/">JavaScript Kurs</a>
+        und zum Lernen von PHP gibt es den
+        <a href="https://www.php-kurs.com/">PHP Kurs</a>
+    </p>
+</body>
+
+</html>
