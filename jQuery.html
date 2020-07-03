@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Das ist ein Test...</title>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <!-- https://developers.google.com/speed/libraries?hl=de#jquery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+
+    <script>
+        window.addEventListener("load", function () {
+
+        });
+
+        // jQuery(document).ready(function(){}
+        $(document).ready(function () {
+            console.log($('a').attr('title'));
+
+            $('a').attr({
+                title: 'jQuery-Kurs',
+                href: 'https://www.html-seminar.de/jquery.htm'
+            });
+
+            $('h1').html('mit jQuery Inhalte ändern');
+
+            let inhaltUeberschrift = $('h1').html();
+            let inhaltAbsatz = $('p').html();
+
+            $('h1').html(inhaltAbsatz);
+            $('#absatz1').html(inhaltUeberschrift);
+
+            $('.abschnitt').text('Text der Klasse abschnitt ersetzt');
+
+            $('.abschnitt:first').text('Text der Klasse abschnitt ersetzt');
+
+            $('p').css('color', 'black');
+            $('p').css('backgroundColor', 'orange');
+
+            $('p').addClass('fehlerhinweise');
+            $('p').removeClass('fehlerhinweise');
+
+            $('#absatz1').click(function () {
+                alert('Es wurde auf #absatz1 geklickt');
+            });
+
+            $('input').keypress(function (e) {
+                if (e.which == 65) {
+                    alert('Es wurde A gedrückt');
+                }
+            });
+        });        
+    </script>
+
+</head>
+
+<body>
+    <h1>jQuery Beispiel: einbinden und erster Befehl</h1>
+
+    <a href="https://www.html-seminar.de/" title="HTML, CSS u. jQuery lernen">
+        http://www.HTML-Seminar.de
+    </a>
+
+    <p class="abschnitt" id="absatz1">Erster <b>wichtiger</b> Absatz</p>
+    <p class="abschnitt fehlerhinweise" id="absatz2">Zweiter Absatz</p>
+    <p class="abschnitt">dritter Absatz</p>
+    <p>vierter Absatz</p>
+    <p class="abschnitt">fünfter Absatz</p>
+
+    <input type="text"></input>
+
+</body>
+
+</html>
