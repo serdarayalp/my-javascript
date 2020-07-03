@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Das ist ein Test...</title>
+
+    <script>
+
+        window.onload = function () {
+
+            /*
+            var btn_id_beispiel = document.getElementById('btn_beispiel');
+            btn_id_beispiel.addEventListener('click', ausgabe, false);
+            */
+
+            /*
+            var btn_class_beispiel = document.getElementsByClassName('btn_klasse');
+            for (var x = 0; x < btn_class_beispiel.length; x++) {
+                btn_class_beispiel[x].addEventListener('click', ausgabe, false);
+            }
+            */
+
+            var btn_html_element_beispiel = document.getElementsByTagName('div');
+            for (var x = 0; x < btn_html_element_beispiel.length; x++) {
+                btn_html_element_beispiel[x].addEventListener('click', ausgabe, false);
+            }
+
+            function ausgabe() {
+                alert('Ausgabe über Funktion ausgabe');
+            }
+        }
+
+        window.addEventListener("load", function () {
+
+        }, false);   
+    </script>
+
+</head>
+
+<body>
+    <div id="btn_beispiel" class="btn_klasse">bitte anklicken</div>
+    <div id="btn_zwei" class="btn_klasse">zweiten anklicken</div>
+</body>
+
+</html>
